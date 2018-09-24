@@ -1172,6 +1172,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AZ_DevZ_Launcher";
             this.Text = "After Zero - DevZ Launcher";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.AZ_DevZ_Launcher_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.Client_Mod_Panel.ResumeLayout(false);
             this.Client_Mod_Panel.PerformLayout();

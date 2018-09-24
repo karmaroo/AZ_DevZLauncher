@@ -306,11 +306,6 @@ namespace DevZLauncher
             }
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void checkBox2_CheckedChanged(object sender, EventArgs e)
         {
 
@@ -445,28 +440,29 @@ namespace DevZLauncher
 
         private void Client_MSD_Btn_Click(object sender, EventArgs e)
         {
-            using (FolderBrowserDialog msdPath = new FolderBrowserDialog())
+            FolderSelectDialog fsd = new FolderSelectDialog("Mod Source Folder");
+            if (fsd.ShowDialog(IntPtr.Zero))
             {
-                msdPath.Description = "Mod Source Folder";
-                if (msdPath.ShowDialog() == DialogResult.OK) Mod_MSD_TextBox.Text = msdPath.SelectedPath;
+                Mod_MSD_TextBox.Text = fsd.FileName;
             }
+            
         }
 
         private void Mod_OCD_Btn_Click(object sender, EventArgs e)
         {
-            using (FolderBrowserDialog ocdPath = new FolderBrowserDialog())
+            FolderSelectDialog fsd = new FolderSelectDialog("Client Output Directory");
+            if (fsd.ShowDialog(IntPtr.Zero))
             {
-                ocdPath.Description = "Client Output Directory";
-                if (ocdPath.ShowDialog() == DialogResult.OK) Mod_OCD_TextBox.Text = ocdPath.SelectedPath;
+                Mod_OCD_TextBox.Text = fsd.FileName;
             }
         }
 
         private void Mod_OSD_Btn_Click(object sender, EventArgs e)
         {
-            using (FolderBrowserDialog osdPath = new FolderBrowserDialog())
+            FolderSelectDialog fsd = new FolderSelectDialog("Server Output Directory");
+            if (fsd.ShowDialog(IntPtr.Zero))
             {
-                osdPath.Description = "Server Output Directory";
-                if (osdPath.ShowDialog() == DialogResult.OK) Mod_OSD_TextBox.Text = osdPath.SelectedPath;
+                Mod_OSD_TextBox.Text = fsd.FileName;
             }
         }
 
@@ -485,13 +481,12 @@ namespace DevZLauncher
 
         private void Server_PTP_Btn_Click(object sender, EventArgs e)
         {
-            using (FolderBrowserDialog ptpPath = new FolderBrowserDialog())
+            FolderSelectDialog fsd = new FolderSelectDialog("Server Profile Directory");
+            if (fsd.ShowDialog(IntPtr.Zero))
             {
-                ptpPath.Description = "Server Profile Directory";
-                if (ptpPath.ShowDialog() == DialogResult.OK) Server_PTP_TextBox.Text = ptpPath.SelectedPath;
+                Server_PTP_TextBox.Text = fsd.FileName;
             }
         }
-
         private void Server_PTC_Btn_Click(object sender, EventArgs e)
         {
             using (OpenFileDialog serverCfgPath = new OpenFileDialog())
@@ -507,10 +502,10 @@ namespace DevZLauncher
 
         private void Server_PTBE_Btn_Click(object sender, EventArgs e)
         {
-            using (FolderBrowserDialog ptbePath = new FolderBrowserDialog())
+            FolderSelectDialog fsd = new FolderSelectDialog("Server Profile Directory");
+            if (fsd.ShowDialog(IntPtr.Zero))
             {
-                ptbePath.Description = "Server Profile Directory";
-                if (ptbePath.ShowDialog() == DialogResult.OK) Server_PTBE_TextBox.Text = ptbePath.SelectedPath;
+                Server_PTBE_TextBox.Text = fsd.FileName;
             }
         }
 
@@ -775,6 +770,15 @@ namespace DevZLauncher
                 PackAddon(Mod_MSD_TextBox.Text, Mod_OCD_TextBox.Text);
             if (Mod_PTS_CBox.Checked)
                 PackAddon(Mod_MSD_TextBox.Text, Mod_OSD_TextBox.Text);
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            //Load Config
+        }
+        private void AZ_DevZ_Launcher_FormClosing(object sender, FormClosingEventArgs e)
+        {
+
         }
     }
 }
