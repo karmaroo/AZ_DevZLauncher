@@ -1,0 +1,9 @@
+W:\platform_DayZ\resource_ModDevLauncher\DevZLauncher\DevZLauncher\bin\Release\DevZLauncher.exe.config
+W:\platform_DayZ\resource_ModDevLauncher\DevZLauncher\DevZLauncher\bin\Release\DevZLauncher.exe
+W:\platform_DayZ\resource_ModDevLauncher\DevZLauncher\DevZLauncher\bin\Release\DevZLauncher.pdb
+W:\platform_DayZ\resource_ModDevLauncher\DevZLauncher\DevZLauncher\obj\Release\DevZLauncher.AZ_DevZ_Launcher.resources
+W:\platform_DayZ\resource_ModDevLauncher\DevZLauncher\DevZLauncher\obj\Release\DevZLauncher.Properties.Resources.resources
+W:\platform_DayZ\resource_ModDevLauncher\DevZLauncher\DevZLauncher\obj\Release\DevZLauncher.csproj.GenerateResource.cache
+W:\platform_DayZ\resource_ModDevLauncher\DevZLauncher\DevZLauncher\obj\Release\DevZLauncher.csproj.CoreCompileInputs.cache
+W:\platform_DayZ\resource_ModDevLauncher\DevZLauncher\DevZLauncher\obj\Release\DevZLauncher.exe
+W:\platform_DayZ\resource_ModDevLauncher\DevZLauncher\DevZLauncher\obj\Release\DevZLauncher.pdb
