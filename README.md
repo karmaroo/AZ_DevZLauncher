@@ -33,7 +33,8 @@ Mikero's makePBO and dependencies:
 
 
 ## Authors
-Jimmy Bulmer / Jack Hedges / TheExperimentZ
+Jimmy Bulmer / Jack Hedges / TheExperimentZ,
+Kegan Hollern, https://github.com/KeganHollern
 
 ## License
 
