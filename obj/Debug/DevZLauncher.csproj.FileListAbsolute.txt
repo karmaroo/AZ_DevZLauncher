@@ -17,3 +17,12 @@ E:\DayZ\DevZLauncher\obj\Debug\DevZLauncher.AZ_DevZ_Launcher.resources
 E:\DayZ\DevZLauncher\obj\Debug\DevZLauncher.Properties.Resources.resources
 E:\DayZ\DevZLauncher\obj\Debug\DevZLauncher.csproj.GenerateResource.cache
 E:\DayZ\DevZLauncher\obj\Debug\DevZLauncher.csproj.CoreCompileInputs.cache
+C:\Users\Scott\Documents\GitHub\AZ_DevZLauncher\bin\Debug\DevZLauncher.exe.config
+C:\Users\Scott\Documents\GitHub\AZ_DevZLauncher\bin\Debug\DevZLauncher.exe
+C:\Users\Scott\Documents\GitHub\AZ_DevZLauncher\bin\Debug\DevZLauncher.pdb
+C:\Users\Scott\Documents\GitHub\AZ_DevZLauncher\obj\Debug\DevZLauncher.AZ_DevZ_Launcher.resources
+C:\Users\Scott\Documents\GitHub\AZ_DevZLauncher\obj\Debug\DevZLauncher.Properties.Resources.resources
+C:\Users\Scott\Documents\GitHub\AZ_DevZLauncher\obj\Debug\DevZLauncher.csproj.GenerateResource.cache
+C:\Users\Scott\Documents\GitHub\AZ_DevZLauncher\obj\Debug\DevZLauncher.csproj.CoreCompileInputs.cache
+C:\Users\Scott\Documents\GitHub\AZ_DevZLauncher\obj\Debug\DevZLauncher.exe
+C:\Users\Scott\Documents\GitHub\AZ_DevZLauncher\obj\Debug\DevZLauncher.pdb
