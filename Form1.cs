@@ -199,7 +199,7 @@ namespace DevZLauncher
             if (Server_NetL_CBox.Checked) ServerParamaters += " -netlog";
             if (Server_FC_CBox.Checked) ServerParamaters += " -freezecheck";
             if (Server_NFP_CBox.Checked) ServerParamaters += " -noFilePatching";
-            ServerParamaters += " -scrAllowFileWrite";
+            ServerParamaters += " -srcAllowFileWrite";
 
             serverProcess = new Process
             {
@@ -240,6 +240,8 @@ namespace DevZLauncher
             if (Client_SD_CBox.Checked) ClientParamaters += $" -scriptDebug=true";
             if (Client_W_CBox.Checked) ClientParamaters += $" -window";
 
+            ClientParamaters += $" -name=Zap";
+
             clientProcess = new Process
             {
                 StartInfo = new ProcessStartInfo
@@ -264,7 +266,7 @@ namespace DevZLauncher
             if (outputDirSplit[outputDirSplit.Length - 1] != "Addons")
                 outputDir += "\\Addons";
 
-            var makePBOParamaters = $"/C makepbo -@=\"pvpengine\" ";
+            var makePBOParamaters = $"/C makepbo -@=\"pvpengine\"";
 
             //Checkbox Paramaters
             if (Mod_RRA_CBox.Checked) makePBOParamaters += $" -F";
@@ -293,7 +295,6 @@ namespace DevZLauncher
             {
                 makePBOParams += $" \"{dir.ToString()}\" \"{outputDir}\"";
                 Process.Start("cmd.exe", makePBOParams);
-                //MessageBox.Show(makePBOParams, "Debug");
                 return;
             }
             string[] subDirEntries = Directory.GetDirectories(dir);
