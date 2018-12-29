@@ -27,6 +27,7 @@ namespace DevZLauncher
             Properties.Settings.Default.Client_PTE = Client_PTE_TextBox.Text;
             Properties.Settings.Default.Client_SIP = Client_SIP_TextBox.Text;
             Properties.Settings.Default.Client_SP = Client_SP_TextBox.Text;
+            Properties.Settings.Default.Client_NAME = Client_NAME_TextBox.Text;
             Properties.Settings.Default.Client_SPass = Client_SPass_TextBox.Text;
             Properties.Settings.Default.Client_Mods = Client_Mods_TextBox.Text;
             string clientParams = "";
@@ -90,6 +91,7 @@ namespace DevZLauncher
             Client_PTE_TextBox.Text = Properties.Settings.Default.Client_PTE;
             Client_SIP_TextBox.Text = Properties.Settings.Default.Client_SIP;
             Client_SP_TextBox.Text = Properties.Settings.Default.Client_SP;
+            Client_NAME_TextBox.Text = Properties.Settings.Default.Client_NAME;
             Client_SPass_TextBox.Text = Properties.Settings.Default.Client_SPass;
             Client_Mods_TextBox.Text = Properties.Settings.Default.Client_Mods;
             var clientParams = Properties.Settings.Default.Client_Params.Split(' ');
@@ -228,6 +230,8 @@ namespace DevZLauncher
                 ClientParamaters += $" -connect={Client_SIP_TextBox.Text} -port={Client_SP_TextBox.Text}";
             if (Client_SPass_TextBox.Text != "" && Client_SIP_TextBox.Text != "" && Client_SP_TextBox.Text != "")
                 ClientParamaters += $" -password={Client_SPass_TextBox.Text}";
+            if (Client_NAME_TextBox.Text != "")
+                ClientParamaters += $" -name={Client_NAME_TextBox.Text}";
 
             //Mods paramaters
             if (Client_Mods_TextBox.Text != "")
@@ -239,8 +243,6 @@ namespace DevZLauncher
             if (Client_NB_CBox.Checked) ClientParamaters += $" -noBenchmark";
             if (Client_SD_CBox.Checked) ClientParamaters += $" -scriptDebug=true";
             if (Client_W_CBox.Checked) ClientParamaters += $" -window";
-
-            ClientParamaters += $" -name=Zap";
 
             clientProcess = new Process
             {
@@ -273,7 +275,7 @@ namespace DevZLauncher
 
             var addonbuilderpath = "C:\\PROGRA~2\\Steam\\STEAMA~1\\common\\DAYZTO~1\\Bin\\ADDONB~1\\AddonBuilder.exe";
 
-            var builderParams = $"/K {addonbuilderpath} \"{sourceDir}\" \"{outputDir}\"";
+            var builderParams = $"/C {addonbuilderpath} \"{sourceDir}\" \"{outputDir}\" -include=include.txt";
             
             //Checkbox Paramaters
           //  if (Mod_RRA_CBox.Checked) makePBOParamaters += $" -F";
@@ -750,7 +752,7 @@ namespace DevZLauncher
                 System.Timers.Timer t1 = new System.Timers.Timer();
                 t1.Elapsed += t1_Elapsed;
                 t1.AutoReset = false;
-                t1.Interval = 2000;
+                t1.Interval = 3000;
                 t1.Start();
             }
         }

@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AZ_DevZ_Launcher));
             this.Client_Mod_Panel = new System.Windows.Forms.Panel();
+            this.Client_NAME_Label = new System.Windows.Forms.Label();
+            this.Client_NAME_TextBox = new System.Windows.Forms.TextBox();
             this.Mod_PA_Btn = new System.Windows.Forms.Button();
             this.Mod_OSO_Btn = new System.Windows.Forms.Button();
             this.Mod_OCO_Btn = new System.Windows.Forms.Button();
@@ -112,6 +114,8 @@
             // Client_Mod_Panel
             // 
             this.Client_Mod_Panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(30)))));
+            this.Client_Mod_Panel.Controls.Add(this.Client_NAME_Label);
+            this.Client_Mod_Panel.Controls.Add(this.Client_NAME_TextBox);
             this.Client_Mod_Panel.Controls.Add(this.Mod_PA_Btn);
             this.Client_Mod_Panel.Controls.Add(this.Mod_OSO_Btn);
             this.Client_Mod_Panel.Controls.Add(this.Mod_OCO_Btn);
@@ -157,12 +161,34 @@
             this.Client_Mod_Panel.Size = new System.Drawing.Size(425, 637);
             this.Client_Mod_Panel.TabIndex = 0;
             // 
+            // Client_NAME_Label
+            // 
+            this.Client_NAME_Label.AutoSize = true;
+            this.Client_NAME_Label.ForeColor = System.Drawing.SystemColors.Control;
+            this.Client_NAME_Label.Location = new System.Drawing.Point(305, 95);
+            this.Client_NAME_Label.Name = "Client_NAME_Label";
+            this.Client_NAME_Label.Size = new System.Drawing.Size(67, 13);
+            this.Client_NAME_Label.TabIndex = 40;
+            this.Client_NAME_Label.Text = "Player Name";
+            // 
+            // Client_NAME_TextBox
+            // 
+            this.Client_NAME_TextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(65)))));
+            this.Client_NAME_TextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Client_NAME_TextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.Client_NAME_TextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Client_NAME_TextBox.ForeColor = System.Drawing.SystemColors.Window;
+            this.Client_NAME_TextBox.Location = new System.Drawing.Point(305, 111);
+            this.Client_NAME_TextBox.Name = "Client_NAME_TextBox";
+            this.Client_NAME_TextBox.Size = new System.Drawing.Size(109, 19);
+            this.Client_NAME_TextBox.TabIndex = 39;
+            // 
             // Mod_PA_Btn
             // 
             this.Mod_PA_Btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(105)))), ((int)(((byte)(146)))));
             this.Mod_PA_Btn.FlatAppearance.BorderSize = 0;
             this.Mod_PA_Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Mod_PA_Btn.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Mod_PA_Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Mod_PA_Btn.Location = new System.Drawing.Point(221, 587);
             this.Mod_PA_Btn.Name = "Mod_PA_Btn";
             this.Mod_PA_Btn.Size = new System.Drawing.Size(193, 39);
@@ -176,7 +202,7 @@
             this.Mod_OSO_Btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(105)))), ((int)(((byte)(146)))));
             this.Mod_OSO_Btn.FlatAppearance.BorderSize = 0;
             this.Mod_OSO_Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Mod_OSO_Btn.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Mod_OSO_Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Mod_OSO_Btn.Location = new System.Drawing.Point(11, 587);
             this.Mod_OSO_Btn.Name = "Mod_OSO_Btn";
             this.Mod_OSO_Btn.Size = new System.Drawing.Size(193, 39);
@@ -190,7 +216,7 @@
             this.Mod_OCO_Btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(105)))), ((int)(((byte)(146)))));
             this.Mod_OCO_Btn.FlatAppearance.BorderSize = 0;
             this.Mod_OCO_Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Mod_OCO_Btn.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Mod_OCO_Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Mod_OCO_Btn.Location = new System.Drawing.Point(221, 532);
             this.Mod_OCO_Btn.Name = "Mod_OCO_Btn";
             this.Mod_OCO_Btn.Size = new System.Drawing.Size(193, 39);
@@ -204,7 +230,7 @@
             this.Mod_OSF_Btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(105)))), ((int)(((byte)(146)))));
             this.Mod_OSF_Btn.FlatAppearance.BorderSize = 0;
             this.Mod_OSF_Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Mod_OSF_Btn.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Mod_OSF_Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Mod_OSF_Btn.Location = new System.Drawing.Point(11, 532);
             this.Mod_OSF_Btn.Name = "Mod_OSF_Btn";
             this.Mod_OSF_Btn.Size = new System.Drawing.Size(193, 39);
@@ -218,7 +244,7 @@
             this.Mod_SS_Btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(105)))), ((int)(((byte)(146)))));
             this.Mod_SS_Btn.FlatAppearance.BorderSize = 0;
             this.Mod_SS_Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Mod_SS_Btn.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Mod_SS_Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Mod_SS_Btn.Location = new System.Drawing.Point(310, 460);
             this.Mod_SS_Btn.Name = "Mod_SS_Btn";
             this.Mod_SS_Btn.Size = new System.Drawing.Size(104, 60);
@@ -407,7 +433,7 @@
             this.Client_SS_Btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(105)))), ((int)(((byte)(146)))));
             this.Client_SS_Btn.FlatAppearance.BorderSize = 0;
             this.Client_SS_Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Client_SS_Btn.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Client_SS_Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Client_SS_Btn.Location = new System.Drawing.Point(221, 218);
             this.Client_SS_Btn.Name = "Client_SS_Btn";
             this.Client_SS_Btn.Size = new System.Drawing.Size(193, 39);
@@ -444,7 +470,7 @@
             this.Client_SC_Btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(105)))), ((int)(((byte)(146)))));
             this.Client_SC_Btn.FlatAppearance.BorderSize = 0;
             this.Client_SC_Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Client_SC_Btn.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Client_SC_Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Client_SC_Btn.Location = new System.Drawing.Point(11, 218);
             this.Client_SC_Btn.Name = "Client_SC_Btn";
             this.Client_SC_Btn.Size = new System.Drawing.Size(193, 39);
@@ -460,17 +486,17 @@
             this.Client_SPass_TextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.Client_SPass_TextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Client_SPass_TextBox.ForeColor = System.Drawing.SystemColors.Window;
-            this.Client_SPass_TextBox.Location = new System.Drawing.Point(278, 111);
+            this.Client_SPass_TextBox.Location = new System.Drawing.Point(214, 111);
             this.Client_SPass_TextBox.Name = "Client_SPass_TextBox";
             this.Client_SPass_TextBox.PasswordChar = '*';
-            this.Client_SPass_TextBox.Size = new System.Drawing.Size(136, 19);
+            this.Client_SPass_TextBox.Size = new System.Drawing.Size(85, 19);
             this.Client_SPass_TextBox.TabIndex = 9;
             // 
             // Client_SPass_Label
             // 
             this.Client_SPass_Label.AutoSize = true;
             this.Client_SPass_Label.ForeColor = System.Drawing.SystemColors.Control;
-            this.Client_SPass_Label.Location = new System.Drawing.Point(275, 95);
+            this.Client_SPass_Label.Location = new System.Drawing.Point(212, 95);
             this.Client_SPass_Label.Name = "Client_SPass_Label";
             this.Client_SPass_Label.Size = new System.Drawing.Size(87, 13);
             this.Client_SPass_Label.TabIndex = 8;
@@ -575,7 +601,7 @@
             this.Client_SP_TextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.Client_SP_TextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Client_SP_TextBox.ForeColor = System.Drawing.SystemColors.Window;
-            this.Client_SP_TextBox.Location = new System.Drawing.Point(202, 111);
+            this.Client_SP_TextBox.Location = new System.Drawing.Point(140, 111);
             this.Client_SP_TextBox.Name = "Client_SP_TextBox";
             this.Client_SP_TextBox.Size = new System.Drawing.Size(68, 19);
             this.Client_SP_TextBox.TabIndex = 7;
@@ -584,7 +610,7 @@
             // 
             this.Client_SP_Label.AutoSize = true;
             this.Client_SP_Label.ForeColor = System.Drawing.SystemColors.Control;
-            this.Client_SP_Label.Location = new System.Drawing.Point(199, 95);
+            this.Client_SP_Label.Location = new System.Drawing.Point(137, 95);
             this.Client_SP_Label.Name = "Client_SP_Label";
             this.Client_SP_Label.Size = new System.Drawing.Size(60, 13);
             this.Client_SP_Label.TabIndex = 6;
@@ -599,7 +625,7 @@
             this.Client_SIP_TextBox.ForeColor = System.Drawing.SystemColors.Window;
             this.Client_SIP_TextBox.Location = new System.Drawing.Point(11, 111);
             this.Client_SIP_TextBox.Name = "Client_SIP_TextBox";
-            this.Client_SIP_TextBox.Size = new System.Drawing.Size(183, 19);
+            this.Client_SIP_TextBox.Size = new System.Drawing.Size(123, 19);
             this.Client_SIP_TextBox.TabIndex = 5;
             // 
             // Client_SI_Label
@@ -652,7 +678,7 @@
             // label1
             // 
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(25)))));
-            this.label1.Font = new System.Drawing.Font("Agency FB", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.Control;
             this.label1.Location = new System.Drawing.Point(0, 276);
             this.label1.Name = "label1";
@@ -664,7 +690,7 @@
             // Client_Title_Label
             // 
             this.Client_Title_Label.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(25)))));
-            this.Client_Title_Label.Font = new System.Drawing.Font("Agency FB", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Client_Title_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Client_Title_Label.ForeColor = System.Drawing.SystemColors.Control;
             this.Client_Title_Label.Location = new System.Drawing.Point(0, 0);
             this.Client_Title_Label.Name = "Client_Title_Label";
@@ -736,7 +762,7 @@
             this.Server_Start_Btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(105)))), ((int)(((byte)(146)))));
             this.Server_Start_Btn.FlatAppearance.BorderSize = 0;
             this.Server_Start_Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Server_Start_Btn.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Server_Start_Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Server_Start_Btn.Location = new System.Drawing.Point(221, 362);
             this.Server_Start_Btn.Name = "Server_Start_Btn";
             this.Server_Start_Btn.Size = new System.Drawing.Size(193, 39);
@@ -750,7 +776,7 @@
             this.Server_SS_Btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(105)))), ((int)(((byte)(146)))));
             this.Server_SS_Btn.FlatAppearance.BorderSize = 0;
             this.Server_SS_Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Server_SS_Btn.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Server_SS_Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Server_SS_Btn.Location = new System.Drawing.Point(11, 362);
             this.Server_SS_Btn.Name = "Server_SS_Btn";
             this.Server_SS_Btn.Size = new System.Drawing.Size(193, 39);
@@ -786,7 +812,7 @@
             this.Server_UFSS_Btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(105)))), ((int)(((byte)(146)))));
             this.Server_UFSS_Btn.FlatAppearance.BorderSize = 0;
             this.Server_UFSS_Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Server_UFSS_Btn.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Server_UFSS_Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Server_UFSS_Btn.Location = new System.Drawing.Point(11, 582);
             this.Server_UFSS_Btn.Name = "Server_UFSS_Btn";
             this.Server_UFSS_Btn.Size = new System.Drawing.Size(403, 39);
@@ -800,7 +826,7 @@
             this.Server_LCrashL_Btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(105)))), ((int)(((byte)(146)))));
             this.Server_LCrashL_Btn.FlatAppearance.BorderSize = 0;
             this.Server_LCrashL_Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Server_LCrashL_Btn.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Server_LCrashL_Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Server_LCrashL_Btn.Location = new System.Drawing.Point(221, 527);
             this.Server_LCrashL_Btn.Name = "Server_LCrashL_Btn";
             this.Server_LCrashL_Btn.Size = new System.Drawing.Size(193, 39);
@@ -814,7 +840,7 @@
             this.Server_LADML_Btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(105)))), ((int)(((byte)(146)))));
             this.Server_LADML_Btn.FlatAppearance.BorderSize = 0;
             this.Server_LADML_Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Server_LADML_Btn.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Server_LADML_Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Server_LADML_Btn.Location = new System.Drawing.Point(11, 527);
             this.Server_LADML_Btn.Name = "Server_LADML_Btn";
             this.Server_LADML_Btn.Size = new System.Drawing.Size(193, 39);
@@ -828,7 +854,7 @@
             this.Server_LCL_Btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(105)))), ((int)(((byte)(146)))));
             this.Server_LCL_Btn.FlatAppearance.BorderSize = 0;
             this.Server_LCL_Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Server_LCL_Btn.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Server_LCL_Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Server_LCL_Btn.Location = new System.Drawing.Point(221, 472);
             this.Server_LCL_Btn.Name = "Server_LCL_Btn";
             this.Server_LCL_Btn.Size = new System.Drawing.Size(193, 39);
@@ -842,7 +868,7 @@
             this.Server_LSL_Btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(105)))), ((int)(((byte)(146)))));
             this.Server_LSL_Btn.FlatAppearance.BorderSize = 0;
             this.Server_LSL_Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Server_LSL_Btn.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Server_LSL_Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Server_LSL_Btn.Location = new System.Drawing.Point(11, 472);
             this.Server_LSL_Btn.Name = "Server_LSL_Btn";
             this.Server_LSL_Btn.Size = new System.Drawing.Size(193, 39);
@@ -856,7 +882,7 @@
             this.Server_LRPT_Btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(105)))), ((int)(((byte)(146)))));
             this.Server_LRPT_Btn.FlatAppearance.BorderSize = 0;
             this.Server_LRPT_Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Server_LRPT_Btn.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Server_LRPT_Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Server_LRPT_Btn.Location = new System.Drawing.Point(221, 417);
             this.Server_LRPT_Btn.Name = "Server_LRPT_Btn";
             this.Server_LRPT_Btn.Size = new System.Drawing.Size(193, 39);
@@ -870,7 +896,7 @@
             this.Server_OLF_Btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(105)))), ((int)(((byte)(146)))));
             this.Server_OLF_Btn.FlatAppearance.BorderSize = 0;
             this.Server_OLF_Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Server_OLF_Btn.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Server_OLF_Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Server_OLF_Btn.Location = new System.Drawing.Point(11, 417);
             this.Server_OLF_Btn.Name = "Server_OLF_Btn";
             this.Server_OLF_Btn.Size = new System.Drawing.Size(193, 39);
@@ -1151,7 +1177,7 @@
             // Server_Title_Label
             // 
             this.Server_Title_Label.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(25)))));
-            this.Server_Title_Label.Font = new System.Drawing.Font("Agency FB", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Server_Title_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Server_Title_Label.ForeColor = System.Drawing.SystemColors.Control;
             this.Server_Title_Label.Location = new System.Drawing.Point(0, 0);
             this.Server_Title_Label.Name = "Server_Title_Label";
@@ -1260,6 +1286,8 @@
         private System.Windows.Forms.Button Server_Start_Btn;
         private System.Windows.Forms.Button Server_SS_Btn;
         private System.Windows.Forms.Button Server_UFSS_Btn;
+        private System.Windows.Forms.Label Client_NAME_Label;
+        private System.Windows.Forms.TextBox Client_NAME_TextBox;
     }
 }
 

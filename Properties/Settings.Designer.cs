@@ -70,7 +70,22 @@ namespace DevZLauncher.Properties {
                 this["Client_SPass"] = value;
             }
         }
-        
+
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string Client_NAME
+        {
+            get
+            {
+                return ((string)(this["Client_NAME"]));
+            }
+            set
+            {
+                this["Client_NAME"] = value;
+            }
+        }
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("")]
