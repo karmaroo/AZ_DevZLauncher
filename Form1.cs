@@ -259,33 +259,40 @@ namespace DevZLauncher
             ControlPropertyThreadSafe(Client_SC_Btn, "Text", "STOP CLIENT");
         }
 
-        private void PackAddon(string sourceDir, string outputDir)
+        private void PackAddon(string sourceDir, string outputDir, string tempPrefix)
         {
-
             var outputDirSplit = outputDir.Split('\\');
             if (outputDirSplit[outputDirSplit.Length - 1] != "Addons")
                 outputDir += "\\Addons";
 
-            var makePBOParamaters = $"/C makepbo -@=\"pvpengine\"";
+            var tempPath = Path.GetTempPath();
 
+            tempPath += $"PvPEngine\\{tempPrefix}";
+
+            //var makePBOParamaters = $"/C makepbo -A -@=\"pvpengine\"";
+
+            var addonbuilderpath = "C:\\PROGRA~2\\Steam\\STEAMA~1\\common\\DAYZTO~1\\Bin\\ADDONB~1\\AddonBuilder.exe";
+
+            var builderParams = $"/K {addonbuilderpath} \"{sourceDir}\" \"{outputDir}\"";
+            
             //Checkbox Paramaters
-            if (Mod_RRA_CBox.Checked) makePBOParamaters += $" -F";
-            if (Mod_CMF_CBox.Checked) makePBOParamaters += $" -G";
-            if (Mod_DP_CBox.Checked) makePBOParamaters += $" -P";
-            if (Mod_AUP_CBox.Checked) makePBOParamaters += $" -U";
+          //  if (Mod_RRA_CBox.Checked) makePBOParamaters += $" -F";
+          //  if (Mod_CMF_CBox.Checked) makePBOParamaters += $" -G";
+          //  if (Mod_DP_CBox.Checked) makePBOParamaters += $" -P";
+          //  if (Mod_AUP_CBox.Checked) makePBOParamaters += $" -U";
 
             if (Directory.GetFiles(@""+sourceDir, "config.cpp").Length == 0)
             {
                 string[] subdirEntries = Directory.GetDirectories(@"" + sourceDir);
                 foreach (string subDir in subdirEntries)
                 {
-                    LoadSubDirs(subDir, makePBOParamaters, outputDir);
+                    //LoadSubDirs(subDir, makePBOParamaters, outputDir);
                 }
             }
             else
             {
-                makePBOParamaters += $" \"{sourceDir}\" \"{outputDir}\"";
-                Process.Start("cmd.exe", makePBOParamaters);
+                //makePBOParamaters += $" \"{sourceDir}\" \"{outputDir}\"";
+                Process.Start("cmd.exe", builderParams);
             }
         }
 
@@ -730,14 +737,35 @@ namespace DevZLauncher
             }
             else
             {
-                if (Mod_PTC_CBox.Checked)
-                    PackAddon(Mod_MSD_TextBox.Text, Mod_OCD_TextBox.Text);
-                if (Mod_PTS_CBox.Checked)
-                    PackAddon(Mod_MSD_TextBox.Text, Mod_OSD_TextBox.Text);
+                PackAddon(Mod_MSD_TextBox.Text, Mod_OCD_TextBox.Text, "client");
 
-                var serverThread = new Thread(new ThreadStart(StartServer));
-                serverThread.Start();
+                // Pause for a couple of seconds
+                System.Timers.Timer packerTimer = new System.Timers.Timer();
+                packerTimer.Elapsed += packerTimer_Elapsed;
+                packerTimer.AutoReset = false;
+                packerTimer.Interval = 1500;
+                packerTimer.Start();
+
+                // Pause for a couple of seconds
+                System.Timers.Timer t1 = new System.Timers.Timer();
+                t1.Elapsed += t1_Elapsed;
+                t1.AutoReset = false;
+                t1.Interval = 2000;
+                t1.Start();
             }
+        }
+
+        void packerTimer_Elapsed(object sender, System.Timers.ElapsedEventArgs e)
+        {
+            Console.WriteLine("packerTimer timer elapsed");
+            PackAddon(Mod_MSD_TextBox.Text, Mod_OSD_TextBox.Text, "server");
+        }
+
+        void t1_Elapsed(object sender, System.Timers.ElapsedEventArgs e)
+        {
+            Console.WriteLine("t1 timer elapsed");
+            var serverThread = new Thread(new ThreadStart(StartServer));
+            serverThread.Start();
         }
 
         private void Client_SC_Btn_Click(object sender, EventArgs e)
@@ -764,10 +792,13 @@ namespace DevZLauncher
 
         private void Mod_PA_Btn_Click(object sender, EventArgs e)
         {
-            if (Mod_PTC_CBox.Checked)
-                PackAddon(Mod_MSD_TextBox.Text, Mod_OCD_TextBox.Text);
-            if (Mod_PTS_CBox.Checked)
-                PackAddon(Mod_MSD_TextBox.Text, Mod_OSD_TextBox.Text);
+            PackAddon(Mod_MSD_TextBox.Text, Mod_OCD_TextBox.Text, "client");
+            // Pause for a couple of seconds
+            System.Timers.Timer packerTimer = new System.Timers.Timer();
+            packerTimer.Elapsed += packerTimer_Elapsed;
+            packerTimer.AutoReset = false;
+            packerTimer.Interval = 1500;
+            packerTimer.Start();
         }
 
         private void Form1_Load(object sender, EventArgs e)
